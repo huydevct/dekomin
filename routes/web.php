@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Web\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('client');
+    $categories = \App\Models\Category::orderBy('id')->get();
+    return view('client', compact(['categories']));
+});
+
+Route::prefix('category')->group(function (){
+    Route::get('/{slug}', [CategoryController::class, 'getBySlug'])->name('category.slug');
 });
