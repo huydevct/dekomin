@@ -59,39 +59,50 @@
             </div>
 
             <div class="grid md:grid-cols-3 grid-cols-2 gap-6">
-                @foreach($products as $product)
-                    <div class="bg-white shadow rounded overflow-hidden group">
-                        <div class="relative">
-                            <img src="{{$product->images[0]['url'] ?? '/assets/images/products/no-image.jpg'}}"
-                                 alt="{{$product->name}}" class="w-full">
-                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center
+                @if(count($products) > 0)
+                    @foreach($products as $product)
+                        <div class="bg-white shadow rounded overflow-hidden group">
+                            <div class="relative">
+                                <img src="{{$product->images[0]['url'] ?? '/assets/images/products/no-image.jpg'}}"
+                                     alt="{{$product->name}}" class="w-full">
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center
                         justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
-                                <a href="/product/{{$product->slug}}"
-                                   class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-                                   title="view product">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <a href="/product/{{$product->slug}}"
+                                       class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+                                       title="view product">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pt-4 pb-3 px-4">
+                                <a href="#">
+                                    <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                                        {{$product->name}}
+                                    </h4>
                                 </a>
+                                <div class="flex items-baseline mb-1 space-x-2">
+                                    <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"><p
+                                            class="text-xl text-primary font-semibold">Giá: Liên hệ chúng tôi để biết về
+                                            giá
+                                            sản phẩm này.</p></a>
+                                </div>
+                                <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
+                                   class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
+                                    Liên hệ để mua.</a>
                             </div>
                         </div>
-                        <div class="pt-4 pb-3 px-4">
-                            <a href="#">
-                                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
-                                    {{$product->name}}
-                                </h4>
-                            </a>
-                            <div class="flex items-baseline mb-1 space-x-2">
-                                <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"><p
-                                        class="text-xl text-primary font-semibold">Giá: Liên hệ chúng tôi để biết về giá
-                                        sản phẩm này.</p></a>
-                            </div>
-                            <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
-                               class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
-                                Liên hệ để mua.</a>
-                            @endforeach
-                        </div>
+                    @endforeach
+                @else
+                    <div class="align-content-center text-center">
+                        <p>Không có sản phẩm khả dụng.</p>
+                        <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
+                           class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
+                            Liên hệ với
+                            chúng tôi để biết thêm chi tiết.
+                        </a>
                     </div>
-
-                    <!-- ./products -->
+            @endif
+            <!-- ./products -->
             </div>
             <!-- ./shop wrapper -->
 

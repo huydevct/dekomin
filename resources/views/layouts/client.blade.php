@@ -7,7 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dekomin - Hàng Nhật nội địa chính hãng, uy tín</title>
 
-    <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7JE16CEZ0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-E7JE16CEZ0');
+    </script>
+
+    <link rel="shortcut icon" href="/assets/images/logo_only.jpg" type="image/x-icon">
 
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/app.css">
@@ -28,7 +38,7 @@
 <header class="py-4 shadow-sm bg-white">
     <div class="container flex items-center justify-between">
         <a href="/">
-            <img src="/assets/images/logo.jpg" alt="Logo" class="w-32">
+            <img src="/assets/images/logo.jpg" alt="Dekomin" class="w-32">
         </a>
 
         <div class="w-full max-w-xl relative flex">
@@ -87,7 +97,7 @@
 <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
     <div class="container grid grid-cols-1 ">
         <div class="col-span-1 space-y-4">
-            <img src="/assets/images/logo.jpg" alt="logo" class="w-12">
+            <img src="/assets/images/logo_only.jpg" alt="logo" class="w-12">
             <div class="mr-2">
                 <p class="text-gray-500">
                     Dekomin - Hàng Nhật nội địa chính hãng, uy tín, chất lượng
