@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dekomin - Hàng Nhật nội đĩa chính hãng</title>
 
-    <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon">
 
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/app.css">
@@ -20,6 +20,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    @vite('../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css')
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 <header class="py-4 shadow-sm bg-white">
     <div class="container flex items-center justify-between">
         <a href="/">
-            <img src="assets/images/logo.svg" alt="Logo" class="w-32">
+            <img src="assets/images/logo.jpg" alt="Logo" class="w-32">
         </a>
 
         <div class="w-full max-w-xl relative flex">
@@ -40,33 +41,6 @@
             <button
                 class="bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition hidden md:flex">Search</button>
         </div>
-
-        <div class="flex items-center space-x-4">
-            <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
-                <div class="text-2xl">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-                <div class="text-xs leading-3">Wishlist</div>
-                <div
-                    class="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
-                    8</div>
-            </a>
-            <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
-                <div class="text-2xl">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-                <div class="text-xs leading-3">Cart</div>
-                <div
-                    class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
-                    2</div>
-            </a>
-            <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
-                <div class="text-2xl">
-                    <i class="fa-regular fa-user"></i>
-                </div>
-                <div class="text-xs leading-3">Account</div>
-            </a>
-        </div>
     </div>
 </header>
 <!-- ./header -->
@@ -75,49 +49,49 @@
 <nav class="bg-gray-800">
     <div class="container flex">
         <div class="px-8 py-4 bg-primary md:flex items-center cursor-pointer relative group hidden">
-                <span class="text-white">
-                    <i class="fa-solid fa-bars"></i>
-                </span>
-            <span class="capitalize ml-2 text-white hidden">All Categories</span>
+            <span class="text-white">
+                <i class="fa-solid fa-bars"></i>
+            </span>
+            <span class="capitalize ml-2 text-white">Tất cả</span>
 
             <!-- dropdown -->
             <div
                 class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
                 <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                    <img src="images/icons/sofa.svg" alt="sofa" class="w-5 h-5 object-contain">
+                    <img src="assets/images/icons/sofa.svg" alt="sofa" class="w-5 h-5 object-contain">
                     <span class="ml-6 text-gray-600 text-sm">Sofa</span>
                 </a>
-                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                    <img src="images/icons/terrace.svg" alt="terrace" class="w-5 h-5 object-contain">
-                    <span class="ml-6 text-gray-600 text-sm">Terarce</span>
-                </a>
-                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                    <img src="images/icons/bed.svg" alt="bed" class="w-5 h-5 object-contain">
-                    <span class="ml-6 text-gray-600 text-sm">Bed</span>
-                </a>
-                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                    <img src="images/icons/office.svg" alt="office" class="w-5 h-5 object-contain">
-                    <span class="ml-6 text-gray-600 text-sm">office</span>
-                </a>
-                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                    <img src="images/icons/outdoor-cafe.svg" alt="outdoor" class="w-5 h-5 object-contain">
-                    <span class="ml-6 text-gray-600 text-sm">Outdoor</span>
-                </a>
-                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                    <img src="images/icons/bed-2.svg" alt="Mattress" class="w-5 h-5 object-contain">
-                    <span class="ml-6 text-gray-600 text-sm">Mattress</span>
-                </a>
+{{--                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">--}}
+{{--                    <img src="images/icons/terrace.svg" alt="terrace" class="w-5 h-5 object-contain">--}}
+{{--                    <span class="ml-6 text-gray-600 text-sm">Terarce</span>--}}
+{{--                </a>--}}
+{{--                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">--}}
+{{--                    <img src="images/icons/bed.svg" alt="bed" class="w-5 h-5 object-contain">--}}
+{{--                    <span class="ml-6 text-gray-600 text-sm">Bed</span>--}}
+{{--                </a>--}}
+{{--                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">--}}
+{{--                    <img src="images/icons/office.svg" alt="office" class="w-5 h-5 object-contain">--}}
+{{--                    <span class="ml-6 text-gray-600 text-sm">office</span>--}}
+{{--                </a>--}}
+{{--                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">--}}
+{{--                    <img src="images/icons/outdoor-cafe.svg" alt="outdoor" class="w-5 h-5 object-contain">--}}
+{{--                    <span class="ml-6 text-gray-600 text-sm">Outdoor</span>--}}
+{{--                </a>--}}
+{{--                <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">--}}
+{{--                    <img src="images/icons/bed-2.svg" alt="Mattress" class="w-5 h-5 object-contain">--}}
+{{--                    <span class="ml-6 text-gray-600 text-sm">Mattress</span>--}}
+{{--                </a>--}}
             </div>
         </div>
 
         <div class="flex items-center justify-between flex-grow md:pl-12 py-5">
             <div class="flex items-center space-x-6 capitalize">
                 <a href="/" class="text-gray-200 hover:text-white transition">Home</a>
-                <a href="pages/" class="text-gray-200 hover:text-white transition">Shop</a>
+                <a href="/" class="text-gray-200 hover:text-white transition">Shop</a>
                 <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
                 <a href="#" class="text-gray-200 hover:text-white transition">Contact us</a>
             </div>
-            <a href="pages/login.balde.php" class="text-gray-200 hover:text-white transition">Login</a>
+{{--            <a href="/" class="text-gray-200 hover:text-white transition">Login</a>--}}
         </div>
     </div>
 </nav>
@@ -129,7 +103,7 @@
 <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
     <div class="container grid grid-cols-1 ">
         <div class="col-span-1 space-y-4">
-            <img src="images/logo.svg" alt="logo" class="w-30">
+            <img src="assets/images/logo.svg" alt="logo" class="w-30">
             <div class="mr-2">
                 <p class="text-gray-500">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, hic?
