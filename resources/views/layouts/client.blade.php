@@ -20,7 +20,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    @vite('../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css')
+    @vite('node_modules/@fortawesome/fontawesome-free/css/all.min.css')
 </head>
 
 <body>
