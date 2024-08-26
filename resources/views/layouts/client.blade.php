@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce Tailwind</title>
+    <title>Dekomin - Hàng Nhật nội đĩa chính hãng</title>
 
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/app.css">
     @vite('resources/css/app.css')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 <header class="py-4 shadow-sm bg-white">
     <div class="container flex items-center justify-between">
         <a href="/">
-            <img src="images/logo.svg" alt="Logo" class="w-32">
+            <img src="assets/images/logo.svg" alt="Logo" class="w-32">
         </a>
 
         <div class="w-full max-w-xl relative flex">
