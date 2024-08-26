@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/app.css">
+    @vite('resources/css/app.css')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
