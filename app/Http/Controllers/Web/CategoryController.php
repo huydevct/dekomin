@@ -27,6 +27,6 @@ class CategoryController extends Controller
         $products = Product::whereIn('id', $product_ids)->get();
         $categories = Category::orderBy('id')->get();
 
-        return view('shop', compact(['products', 'categories']));
+        return view('pages.shop', compact(['products', 'categories']));
     }
 }

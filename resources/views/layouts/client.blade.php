@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dekomin - Hàng Nhật nội đĩa chính hãng</title>
+    <title>Dekomin - Hàng Nhật nội địa chính hãng, uy tín</title>
 
     <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon">
 
@@ -59,7 +59,7 @@
                 class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
                 @foreach($categories as $category)
                 <a href="/category/{{$category->slug}}" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                    <img src="assets/images/icons/sofa.svg" alt="sofa" class="w-5 h-5 object-contain">
+                    <img src="/assets/images/icons/{{$category->slug}}.svg" alt="sofa" class="w-5 h-5 object-contain">
                     <span class="ml-6 text-gray-600 text-sm">{{$category->name}}</span>
                 </a>
                 @endforeach
@@ -69,12 +69,12 @@
         <div class="flex items-center justify-between flex-grow md:pl-12 py-5">
             <div class="flex items-center space-x-6 capitalize">
                 <a href="/" class="text-gray-200 hover:text-white transition">Home</a>
-                <a href="/" class="text-gray-200 hover:text-white transition">Shop</a>
+                <a href="/shop" class="text-gray-200 hover:text-white transition">Shop</a>
                 @foreach($categories as $category)
                     <a href="/category/{{$category->slug}}" class="text-gray-200 hover:text-white transition">{{$category->name}}</a>
                 @endforeach
-                <a href="#" class="text-gray-200 hover:text-white transition">Về chúng tôi</a>
-                <a href="#" class="text-gray-200 hover:text-white transition">Liên hệ</a>
+                <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank" class="text-gray-200 hover:text-white transition">Về chúng tôi</a>
+                <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank" class="text-gray-200 hover:text-white transition">Liên hệ</a>
             </div>
         </div>
     </div>
@@ -90,18 +90,18 @@
             <img src="/assets/images/logo.jpg" alt="logo" class="w-12">
             <div class="mr-2">
                 <p class="text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, hic?
+                    Dekomin - Hàng Nhật nội địa chính hãng, uy tín, chất lượng
                 </p>
             </div>
             <div class="flex space-x-5">
-                <a href="#" class="text-gray-400 hover:text-gray-500"><i
+                <a href="https://www.facebook.com/profile.php?id=61550643794060" class="text-gray-400 hover:text-gray-500"><i
                         class="fa-brands fa-facebook-square"></i></a>
-                <a href="#" class="text-gray-400 hover:text-gray-500"><i
+                <a href="https://www.facebook.com/profile.php?id=61550643794060" class="text-gray-400 hover:text-gray-500"><i
                         class="fa-brands fa-instagram-square"></i></a>
-                <a href="#" class="text-gray-400 hover:text-gray-500"><i
-                        class="fa-brands fa-twitter-square"></i></a>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                    <i class="fa-brands fa-github-square"></i>
+{{--                <a href="#" class="text-gray-400 hover:text-gray-500"><i--}}
+{{--                        class="fa-brands fa-twitter-square"></i></a>--}}
+{{--                <a href="#" class="text-gray-400 hover:text-gray-500">--}}
+{{--                    <i class="fa-brands fa-github-square"></i>--}}
                 </a>
             </div>
         </div>
@@ -109,35 +109,16 @@
         <div class="col-span-2 grid grid-cols-2 gap-4">
             <div class="grid grid-cols-2 gap-4 md:gap-8">
                 <div>
-                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Về chúng tôi</h3>
                     <div class="mt-4 space-y-4">
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analitycs</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3>
-                    <div class="mt-4 space-y-4">
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Pricing</a>
-                        <!-- <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentation</a> -->
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guides</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API Status</a>
+                        <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank" class="text-base text-gray-500 hover:text-gray-900 block">Hệ thống cửa hàn</a>
+                        <a href="/" class="text-base text-gray-500 hover:text-gray-900 block">Sản phẩm</a>
+                        <a href="/" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
-                    <div class="mt-4 space-y-4">
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analitycs</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
-                    </div>
-                </div>
+            <div class="grid grid-cols-2 gap-12">
+
 
                 <div>
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3>
@@ -146,6 +127,12 @@
                         <!-- <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentation</a> -->
                         <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guides</a>
                         <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API Status</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Hỗ trợ</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="https://www.facebook.com/profile.php?id=61550643794060" class="text-base text-gray-500 hover:text-gray-900 block">Liên hệ</a>
                     </div>
                 </div>
             </div>
@@ -157,7 +144,7 @@
 <!-- copyright -->
 <div class="bg-gray-800 py-4">
     <div class="container flex items-center justify-between">
-        <p class="text-white">&copy; TailCommerce - All Right Reserved</p>
+        <p class="text-white">&copy; Dekomin - All Right Reserved</p>
         <div>
             <img src="/assets/images/methods.png" alt="methods" class="h-5">
         </div>

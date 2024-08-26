@@ -27,6 +27,9 @@ class Product extends Model
         'active',
         'parent_id',
         'order',
+        'brand',
+        'sku',
+        'is_recommend',
         'created_at',
         'updated_at'
     ];
@@ -52,6 +55,12 @@ class Product extends Model
         ],
         "box_length" => [
             "type" => "double",
+            "insert" => true,
+            "query_condition" => true,
+            "sort" => true
+        ],
+        "is_recommend" => [
+            "type" => "int",
             "insert" => true,
             "query_condition" => true,
             "sort" => true
