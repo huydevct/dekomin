@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dekomin - Hàng Nhật nội đĩa chính hãng</title>
 
-    <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon">
 
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/app.css">
@@ -28,7 +28,7 @@
 <header class="py-4 shadow-sm bg-white">
     <div class="container flex items-center justify-between">
         <a href="/">
-            <img src="assets/images/logo.jpg" alt="Logo" class="w-32">
+            <img src="/assets/images/logo.jpg" alt="Logo" class="w-32">
         </a>
 
         <div class="w-full max-w-xl relative flex">

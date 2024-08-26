@@ -3,7 +3,7 @@
 
 <!-- breadcrumb -->
 <div class="container py-4 flex items-center gap-3">
-    <a href="../client.blade.php" class="text-primary text-base">
+    <a href="client.blade.php" class="text-primary text-base">
         <i class="fa-solid fa-house"></i>
     </a>
     <span class="text-sm text-gray-400">
