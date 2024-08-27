@@ -10,18 +10,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dekomin - Hàng Nhật nội địa chính hãng, uy tín</title>
 
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PW4K4WD8');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7JE16CEZ0"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XP6B8Y71PD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-E7JE16CEZ0');
+        gtag('config', 'G-XP6B8Y71PD');
     </script>
 
     <link rel="shortcut icon" href="/assets/images/logo_only.jpg" type="image/x-icon">
@@ -41,6 +53,10 @@
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW4K4WD8"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <!-- header -->
 <header class="py-4 shadow-sm bg-white">
     <div class="container flex items-center justify-between">
@@ -58,7 +74,8 @@
             <div id="dropdown-search-product"
                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                  style="position: absolute;top: 100%;width: 100%;">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" id="search-ul" aria-labelledby="dropdown-button-2">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" id="search-ul"
+                    aria-labelledby="dropdown-button-2">
                 </ul>
             </div>
             <button type="submit" onclick="search()"
@@ -189,9 +206,9 @@
 
 <script>
     function search(e) {
-        const value  = document.getElementById('search').value;
+        const value = document.getElementById('search').value;
 
-        fetch('http://localhost:8001/product/search/' + value, {
+        fetch('https://dekomin.store/product/search/' + value, {
             method: 'GET', // Hoặc 'GET' nếu cần
             headers: {
                 'Content-Type': 'application/json'
