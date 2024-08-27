@@ -208,7 +208,7 @@
     function search(e) {
         const value = document.getElementById('search').value;
 
-        fetch('https://dekomin.store/product/search/' + value, {
+        fetch('http://localhost:8000/product/search/' + value, {
             method: 'GET', // Hoặc 'GET' nếu cần
             headers: {
                 'Content-Type': 'application/json'
@@ -218,7 +218,25 @@
             .then(data => {
                 console.log('Success:', data.data);
                 const ulSearch = document.getElementById('search-ul');
+                ulSearch.innerHTML = "";
                 const response = data.data;
+
+                if(response.length === 0){
+                    const html = document.createElement('li');
+                    html.innerHTML = `
+                        <a type="button" href="{{request()->path()}}"
+                                class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem">
+                            <div class="inline-flex items-center">
+                                Không có sản phẩm thỏa mãn.
+                            </div>
+                        </a>
+                    `
+                    ulSearch.appendChild(html);
+
+                    const divSearch = document.getElementById('dropdown-search-product');
+                    divSearch.classList.remove('hidden')
+                }
                 response.forEach((element) => {
                     const html = document.createElement('li');
                     html.innerHTML = `
@@ -234,7 +252,7 @@
                     ulSearch.appendChild(html);
 
                     const divSearch = document.getElementById('dropdown-search-product');
-                    divSearch.classList.toggle('hidden')
+                    divSearch.classList.remove('hidden')
                 })
             })
             .catch(error => {
