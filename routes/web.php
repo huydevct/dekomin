@@ -32,5 +32,6 @@ Route::prefix('category')->group(function () {
 });
 
 Route::prefix('product')->group(function () {
+    Route::get('/search/{keyword}', [WebController::class, 'search'])->name('product.search');
     Route::get('/{slug}', [WebController::class, 'getBySlug'])->name('product.slug');
 });

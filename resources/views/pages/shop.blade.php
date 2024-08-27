@@ -57,9 +57,9 @@
                 <div class="flex gap-2 ml-auto">
                 </div>
             </div>
+            @if(count($products) > 0)
 
-            <div class="grid md:grid-cols-3 grid-cols-2 gap-6">
-                @if(count($products) > 0)
+                <div class="grid md:grid-cols-3 grid-cols-2 gap-6">
                     @foreach($products as $product)
                         <div class="bg-white shadow rounded overflow-hidden group">
                             <div class="relative">
@@ -91,19 +91,20 @@
                                     Liên hệ để mua.</a>
                             </div>
                         </div>
-                    @endforeach
-                @else
-                    <div class="align-content-center text-center">
-                        <p>Không có sản phẩm khả dụng.</p>
-                        <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
-                           class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
-                            Liên hệ với
-                            chúng tôi để biết thêm chi tiết.
-                        </a>
-                    </div>
-            @endif
-            <!-- ./products -->
-            </div>
+                </div>
+
+                @endforeach
+            @else
+                <div class="align-content-center text-center">
+                    <p class="mb-2">Không có sản phẩm khả dụng.</p>
+                    <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
+                       class="px-5 w-30 py-1 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition">
+                        Liên hệ với
+                        chúng tôi để biết thêm chi tiết.
+                    </a>
+                </div>
+        @endif
+        <!-- ./products -->
             <!-- ./shop wrapper -->
 
 @endsection

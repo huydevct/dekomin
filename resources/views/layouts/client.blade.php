@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+@php
+    $categories = \App\Models\Category::where('active', 1)->orderBy('id')->get();
+@endphp
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +14,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7JE16CEZ0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-E7JE16CEZ0');
@@ -19,8 +26,8 @@
 
     <link rel="shortcut icon" href="/assets/images/logo_only.jpg" type="image/x-icon">
 
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/app.css">
+    {{--    <link rel="stylesheet" href="../../css/main.css">--}}
+    {{--    <link rel="stylesheet" href="../../css/app.css">--}}
     @vite('resources/css/app.css')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +36,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    {{--    <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">--}}
     @vite('node_modules/@fortawesome/fontawesome-free/css/all.min.css')
 </head>
 
@@ -48,8 +55,16 @@
             <input type="text" name="search" id="search"
                    class="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none hidden md:flex"
                    placeholder="search">
-            <button
-                class="bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition hidden md:flex">Search</button>
+            <div id="dropdown-search-product"
+                 class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                 style="position: absolute;top: 100%;width: 100%;">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" id="search-ul" aria-labelledby="dropdown-button-2">
+                </ul>
+            </div>
+            <button type="submit" onclick="search()"
+                    class="bg-primary items-center border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition hidden md:flex">
+                Search
+            </button>
         </div>
     </div>
 </header>
@@ -68,10 +83,12 @@
             <div
                 class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
                 @foreach($categories as $category)
-                <a href="/category/{{$category->slug}}" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
-                    <img src="/assets/images/icons/{{$category->slug}}.svg" alt="sofa" class="w-5 h-5 object-contain">
-                    <span class="ml-6 text-gray-600 text-sm">{{$category->name}}</span>
-                </a>
+                    <a href="/category/{{$category->slug}}"
+                       class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="/assets/images/icons/{{$category->slug}}.svg" alt="sofa"
+                             class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">{{$category->name}}</span>
+                    </a>
                 @endforeach
             </div>
         </div>
@@ -81,10 +98,13 @@
                 <a href="/" class="text-gray-200 hover:text-white transition">Home</a>
                 <a href="/shop" class="text-gray-200 hover:text-white transition">Shop</a>
                 @foreach($categories as $category)
-                    <a href="/category/{{$category->slug}}" class="text-gray-200 hover:text-white transition">{{$category->name}}</a>
+                    <a href="/category/{{$category->slug}}"
+                       class="text-gray-200 hover:text-white transition">{{$category->name}}</a>
                 @endforeach
-                <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank" class="text-gray-200 hover:text-white transition">Về chúng tôi</a>
-                <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank" class="text-gray-200 hover:text-white transition">Liên hệ</a>
+                <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
+                   class="text-gray-200 hover:text-white transition">Về chúng tôi</a>
+                <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
+                   class="text-gray-200 hover:text-white transition">Liên hệ</a>
             </div>
         </div>
     </div>
@@ -104,14 +124,16 @@
                 </p>
             </div>
             <div class="flex space-x-5">
-                <a href="https://www.facebook.com/profile.php?id=61550643794060" class="text-gray-400 hover:text-gray-500"><i
+                <a href="https://www.facebook.com/profile.php?id=61550643794060"
+                   class="text-gray-400 hover:text-gray-500"><i
                         class="fa-brands fa-facebook-square"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61550643794060" class="text-gray-400 hover:text-gray-500"><i
+                <a href="https://www.facebook.com/profile.php?id=61550643794060"
+                   class="text-gray-400 hover:text-gray-500"><i
                         class="fa-brands fa-instagram-square"></i></a>
-{{--                <a href="#" class="text-gray-400 hover:text-gray-500"><i--}}
-{{--                        class="fa-brands fa-twitter-square"></i></a>--}}
-{{--                <a href="#" class="text-gray-400 hover:text-gray-500">--}}
-{{--                    <i class="fa-brands fa-github-square"></i>--}}
+                {{--                <a href="#" class="text-gray-400 hover:text-gray-500"><i--}}
+                {{--                        class="fa-brands fa-twitter-square"></i></a>--}}
+                {{--                <a href="#" class="text-gray-400 hover:text-gray-500">--}}
+                {{--                    <i class="fa-brands fa-github-square"></i>--}}
                 </a>
             </div>
         </div>
@@ -121,7 +143,8 @@
                 <div>
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Về chúng tôi</h3>
                     <div class="mt-4 space-y-4">
-                        <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank" class="text-base text-gray-500 hover:text-gray-900 block">Hệ thống cửa hàn</a>
+                        <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
+                           class="text-base text-gray-500 hover:text-gray-900 block">Hệ thống cửa hàn</a>
                         <a href="/" class="text-base text-gray-500 hover:text-gray-900 block">Sản phẩm</a>
                         <a href="/" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
                     </div>
@@ -142,7 +165,8 @@
                 <div>
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Hỗ trợ</h3>
                     <div class="mt-4 space-y-4">
-                        <a href="https://www.facebook.com/profile.php?id=61550643794060" class="text-base text-gray-500 hover:text-gray-900 block">Liên hệ</a>
+                        <a href="https://www.facebook.com/profile.php?id=61550643794060"
+                           class="text-base text-gray-500 hover:text-gray-900 block">Liên hệ</a>
                     </div>
                 </div>
             </div>
@@ -162,5 +186,44 @@
 </div>
 <!-- ./copyright -->
 </body>
+
+<script>
+    function search(e) {
+        const value  = document.getElementById('search').value;
+
+        fetch('http://localhost:8001/product/search/' + value, {
+            method: 'GET', // Hoặc 'GET' nếu cần
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data.data);
+                const ulSearch = document.getElementById('search-ul');
+                const response = data.data;
+                response.forEach((element) => {
+                    const html = document.createElement('li');
+                    html.innerHTML = `
+                        <a type="button" href="/product/${element.slug}"
+                                class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem">
+                            <div class="inline-flex items-center">
+                                <img src="${element.images && element.images.length > 0 ? element.images[0]?.url : "/assets/images/products/no-image.jpg"}" class="w-10 h-10 px-3">
+                                ${element.name}
+                            </div>
+                        </a>
+                    `
+                    ulSearch.appendChild(html);
+
+                    const divSearch = document.getElementById('dropdown-search-product');
+                    divSearch.classList.toggle('hidden')
+                })
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>
 
 </html>

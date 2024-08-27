@@ -15,7 +15,7 @@ class CategoryController extends Controller
     {
         $category = Category::where('slug', $slug)->first();
         if (empty($category)){
-            return view('client');
+            abort(404);
         }
 
         $product_categories = ProductCategory::where('category_id', $category->id)->get();
