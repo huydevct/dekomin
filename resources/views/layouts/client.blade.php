@@ -208,7 +208,7 @@
     function search(e) {
         const value = document.getElementById('search').value;
 
-        fetch('http://localhost:8000/product/search/' + value, {
+        fetch('https://dekomin.store/product/search/' + value, {
             method: 'GET', // Hoặc 'GET' nếu cần
             headers: {
                 'Content-Type': 'application/json'
