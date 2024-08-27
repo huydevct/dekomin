@@ -89,7 +89,7 @@
                         </a>
                         <div class="flex items-baseline mb-1 space-x-2">
                             <a target="_blank" href="https://www.facebook.com/profile.php?id=61550643794060"><p
-                                    class="text-xl text-primary font-semibold">Giá: Liên hệ với chúng tôi để biết giá của sản phẩm.</p>
+                                    class="text-xl text-primary font-semibold">Liên hệ với chúng tôi để biết giá của sản phẩm.</p>
                             </a>
                         </div>
                         <div class="flex items-center">
