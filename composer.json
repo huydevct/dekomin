@@ -11,8 +11,9 @@
         "nwidart/laravel-modules": "^10.0",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
+        "intervention/image": "^3.3",
         "ngocnm/laravel_helpers": "^8.0",
-      "ext-json": "*"
+        "ext-json": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

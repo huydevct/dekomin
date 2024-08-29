@@ -10,6 +10,7 @@ use App\Services\Queues\QueueGet;
 use App\Services\Devices\DeviceGet;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
+use Intervention\Image\ImageManager;
 use Jenssegers\Agent\Facades\Agent;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
@@ -32,6 +33,46 @@ class AppHelper
     //         return $formattedNumber . 'M';
     //     }
     // }
+
+    static function getPathSaveFile(string $extension = 'jpeg')
+    {
+        $now = time();
+        $file_name = "{$now}_" . Str::random(5) . ".$extension";
+        $path = date('Y/m/d') . "/$file_name";
+        return [
+            'file_name' => $file_name,
+            'path' => $path
+        ];
+    }
+
+    static function resizeAndSaveImage($image, $path)
+    {
+        $inter_image = ImageManager::imagick()->read($image);
+        $width = $inter_image->width();
+        $height = $inter_image->height();
+        $sizes = config('filesystems.image_resize');
+        $path_save = [
+            'full' => 'upload/images/full/' . $path
+        ];
+        Storage::put($path_save['full'], $inter_image->encode());
+        foreach ($sizes as $type => $size) {
+            if ($width >= $size) {
+                $inter_image_cp = clone $inter_image;
+                $inter_image_cp->scaleDown(width: $size);
+                $image_path = "upload/images/$type/" . $path;
+                $path_save[$type] = $image_path;
+                Storage::put($image_path, $inter_image_cp->encode());
+            }
+        }
+        return [
+            'size' => [
+                'width' => $width,
+                'height' => $height
+            ],
+            'path' => $path_save
+        ];
+    }
+
     static function formatNumber($number, $noLetter = false)
     {
         $n_format = number_format($number);

@@ -285,4 +285,20 @@ class Product extends Model
             'category_id'
         );
     }
+
+    const relationship_products_fields = ['id', 'title', 'images', 'order', 'parent_id', 'slug', 'sku',
+        'price', 'active', 'stock', 'stock_sold', 'body_html', 'description',];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'parent_id', 'id');
+    }
+
+    const relationship_parent_fields = ['id', 'title', 'images', 'order', 'parent_id', 'slug', 'sku',
+        'price', 'active', 'stock', 'stock_sold', 'body_html', 'description',];
+
+    public function parent()
+    {
+        return $this->belongsTo(Product::class, 'parent_id', 'id');
+    }
 }
