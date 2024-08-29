@@ -36,4 +36,8 @@ Route::prefix('product')->group(function () {
     Route::get('/{slug}', [WebController::class, 'getBySlug'])->name('product.slug');
 });
 
+Route::get('/admin', function (){
+    return redirect()->route('login');
+});
+
 require "admin/index.php";
