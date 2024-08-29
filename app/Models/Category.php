@@ -26,19 +26,19 @@ class Category extends Model
 
     protected $fillable = [
         'name',
-        'name_md5',
-        'category_shopify_id',
-        'description',
-        'body_html',
-        'product_count',
+//        'name_md5',
+//        'category_shopify_id',
+//        'description',
+//        'body_html',
+//        'product_count',
         'active',
 //        'stock_sold',
 //        'price',
         'parent_id',
 //        'product_shopify_id',
 //        'variant_shopify_id',
-        'category_shopify_image_url',
-        'category_shopify_image_alt',
+//        'category_shopify_image_url',
+//        'category_shopify_image_alt',
 //        'stock',
         'slug',
         'order',
@@ -61,36 +61,36 @@ class Category extends Model
             "query_condition" => true,
             "sort" => true
         ],
-        "name_md5" => [
-            "type" => "string",
-            "insert" => true,
-            "query_condition" => true,
-            "sort" => true
-        ],
-        "slug_md5" => [
-            "type" => "string",
-            "insert" => true,
-            "query_condition" => true,
-            "sort" => true
-        ],
-        "images" => [
-            "type" => "string",
-            "insert" => true,
-            "query_condition" => true,
-            "sort" => true
-        ],
+//        "name_md5" => [
+//            "type" => "string",
+//            "insert" => true,
+//            "query_condition" => true,
+//            "sort" => true
+//        ],
+//        "slug_md5" => [
+//            "type" => "string",
+//            "insert" => true,
+//            "query_condition" => true,
+//            "sort" => true
+//        ],
+//        "images" => [
+//            "type" => "string",
+//            "insert" => true,
+//            "query_condition" => true,
+//            "sort" => true
+//        ],
 //        "weight" => [
 //            "type" => "double",
 //            "insert" => true,
 //            "query_condition" => true,
 //            "sort" => true
 //        ],
-        "product_count" => [
-            "type" => "int",
-            "insert" => true,
-            "query_condition" => true,
-            "sort" => true
-        ],
+//        "product_count" => [
+//            "type" => "int",
+//            "insert" => true,
+//            "query_condition" => true,
+//            "sort" => true
+//        ],
 //        "price" => [
 //            "type" => "double",
 //            "insert" => true,
@@ -103,18 +103,18 @@ class Category extends Model
 //            "query_condition" => true,
 //            "sort" => true
 //        ],
-        "category_shopify_image_url" => [
-            "type" => "string",
-            "insert" => true,
-            "query_condition" => true,
-            "sort" => true
-        ],
-        "category_shopify_image_alt" => [
-            "type" => "string",
-            "insert" => true,
-            "query_condition" => true,
-            "sort" => true
-        ],
+//        "category_shopify_image_url" => [
+//            "type" => "string",
+//            "insert" => true,
+//            "query_condition" => true,
+//            "sort" => true
+//        ],
+//        "category_shopify_image_alt" => [
+//            "type" => "string",
+//            "insert" => true,
+//            "query_condition" => true,
+//            "sort" => true
+//        ],
 //        "sku" => [
 //            "type" => "string",
 //            "insert" => true,
@@ -127,12 +127,12 @@ class Category extends Model
 //            "query_condition" => true,
 //            "sort" => true
 //        ],
-        "body_html" => [
-            "type" => "string",
-            "insert" => true,
-            "query_condition" => true,
-            "sort" => true
-        ],
+//        "body_html" => [
+//            "type" => "string",
+//            "insert" => true,
+//            "query_condition" => true,
+//            "sort" => true
+//        ],
         "slug" => [
             "type" => "string",
             "insert" => true,

@@ -35,3 +35,5 @@ Route::prefix('product')->group(function () {
     Route::get('/search/{keyword}', [WebController::class, 'search'])->name('product.search');
     Route::get('/{slug}', [WebController::class, 'getBySlug'])->name('product.slug');
 });
+
+require "admin/index.php";
