@@ -12,11 +12,11 @@ class ProductGet
 {
     static function getByApi()
     {
-        $products = Product::baseQueryBuilder(Product::class)->with('languages');
+        $products = Product::baseQueryBuilder(Product::class);
         if (Request::has('limit')) {
             return $products->limit(Helper::BaseApiRequest()->getLimit())->get();
         }
-        return $products->paginate(30);
+        return $products->simplePaginate(30);
     }
 
     static function getByMd5(string $productMd5, \Closure $callback = null)
@@ -35,7 +35,7 @@ class ProductGet
 
     static function getByAdmin($limit = 30)
     {
-        $products = Product::select("*")->with('languages')->with('categories');
+        $products = Product::select("*")->with('categories');
         $request = Request::all();
 //        $product = new Product();
 //        $products = Product::baseQueryBuilder($product);
@@ -116,17 +116,10 @@ class ProductGet
                 $products->where('parent_id', $parent_id);
             }
         }
-        if (!Request::has('parent_id') &&
-            !Request::has('sku') &&
-            !Request::has('product_id') &&
-            !Request::has('flavour') &&
-            !Request::has('stock_sort') &&
-            !Request::has('popular') &&
-            !Request::has('is_sale') &&
-            !Request::has('price_sort') &&
+        if (!Request::has('sku') &
             !Request::has('brand') &&
             !Request::has('category_id')) {
-            $products->where('parent_id', 0)->orderBy('id', 'desc');
+            $products->orderBy('id', 'desc');
         }
         if ($limit == -1) {
             return $products->get();
@@ -136,6 +129,6 @@ class ProductGet
 
     static function getById(int $id)
     {
-        return Product::with('categories')->with('languages')->find($id);
+        return Product::with('categories')->find($id);
     }
 }

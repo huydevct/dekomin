@@ -34,16 +34,16 @@
 {{--        </li>--}}
         <li class="nav-item">
             <a class="nav-link" href="{!! route('admin.categories.get') !!}">
-                <x-coreui::vendors.icon name="cil-loop"></x-coreui::vendors.icon>
+                <x-coreui::vendors.icon name="cil-tags"></x-coreui::vendors.icon>
                 Categories
             </a>
         </li>
-{{--        <li class="nav-item">--}}
-{{--            <a class="nav-link" href="{!! route('admin.assistants.get') !!}">--}}
-{{--                <x-coreui::vendors.icon name="cil-user-female"></x-coreui::vendors.icon>--}}
-{{--                Assistants--}}
-{{--            </a>--}}
-{{--        </li>--}}
+        <li class="nav-item">
+            <a class="nav-link" href="{!! route('admin.products.list') !!}">
+                <x-coreui::vendors.icon name="cil-cart"></x-coreui::vendors.icon>
+                Products
+            </a>
+        </li>
 {{--        <li class="nav-item">--}}
 {{--            <a class="nav-link" href="{!! route('admin.threads.get') !!}">--}}
 {{--                <x-coreui::vendors.icon name="cil-loop-1"></x-coreui::vendors.icon>--}}

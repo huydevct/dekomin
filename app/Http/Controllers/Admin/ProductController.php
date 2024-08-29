@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProductRequest;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use App\Models\ProductLanguage;
 use App\Services\ProductService\ProductGet;
 use App\Services\ProductService\ProductSet;
@@ -19,7 +20,7 @@ class ProductController extends Controller
         $products = ProductGet::getByAdmin();
         $products->appends($request->all());
 
-        return view('pages.products.list', compact(['products']));
+        return view('pages.admin.products.list', compact(['products']));
     }
 
     function store(ProductRequest $request)
@@ -34,8 +35,8 @@ class ProductController extends Controller
     {
         $product = ProductGet::getById($id);
         if (empty($product)) abort(404);
-        $product->description_vi = '';
-        $product->description_zh = '';
+//        $product->description_vi = '';
+//        $product->description_zh = '';
 
 //        if (!empty($product->languages)) {
 //            foreach ($product->languages as $language) {
@@ -54,12 +55,12 @@ class ProductController extends Controller
 //            }
 //        }
         $categories = Category::orderBy('id')->get();
-        $products = Product::where('parent_id', 0)->get();
-        $product_types = config('product.Products');
-        $packages = config('product.Packages');
+//        $products = Product::get();
+//        $product_types = config('product.Products');
+//        $packages = config('product.Packages');
 
         $params = \Illuminate\Support\Facades\Request::get('params', null);
-        return view('pages.products.create_update', compact(['product', 'categories', 'params', 'products', 'product_types', 'packages']));
+        return view('pages.admin.products.create_update', compact(['product', 'categories', 'params']));
     }
 
     function destroy($id)
@@ -68,6 +69,7 @@ class ProductController extends Controller
         if (empty($product)) abort(404);
         DB::beginTransaction();
         ProductSet::delete($id);
+        ProductCategory::where('product_id', $id)->delete();
 //        ProductLanguage::where('product_id', $id)->delete();
         DB::commit();
         return $this->response('Deleted success');
@@ -87,10 +89,10 @@ class ProductController extends Controller
     function create()
     {
         $categories = Category::orderBy('id')->get();
-        $products = Product::where('parent_id', 0)->get();
-        $product_types = config('product.Products');
-        $packages = config('product.Packages');
+//        $products = Product::where('parent_id', 0)->get();
+//        $product_types = config('product.Products');
+//        $packages = config('product.Packages');
 
-        return view('pages.products.create_update', compact(['categories', 'products', 'product_types', 'packages']));
+        return view('pages.admin.products.create_update', compact(['categories']));
     }
 }
