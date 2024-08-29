@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix("admin")->middleware(['auth'])->group(function (){
     require "categories.php";
-//    require "types.php";
-//    require "apps.php";
+    require "products.php";
+    require "storage.php";
 //    require "lock_screens.php";
 //    require "log_traffic.php";
 //    require "color_phones.php";
