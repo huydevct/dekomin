@@ -16,11 +16,11 @@
     <!-- product-detail -->
     <div class="container grid grid-cols-2 gap-6">
         <div>
-            <img src="/assets/images/products/no-image.jpg" alt="{{$product->slug . $product->id}}" class="w-full">
+            <img src="{{$product->images[0]['url']['full'] ? $product->images[0]['url']['full'] : '/assets/images/products/no-image.jpg'}}" alt="{{$product->slug . $product->id}}" class="w-full">
             <div class="grid grid-cols-5 gap-4 mt-4">
-                @if(!empty($product->image))
+                @if(!empty($product->images))
                     @foreach($product->images as $image)
-                        <img src="{{$image['url']}} ?? '/assets/images/products/no-image.jpg'"
+                        <img src="{{$image['url']['full'] ? $image['url']['full'] : '/assets/images/products/no-image.jpg'}}"
                              alt="{{$product->slug . $product->id}}"
                              class="w-full cursor-pointer border border-primary">
                     @endforeach
@@ -136,7 +136,7 @@
             @foreach($products as $prod)
                 <div class="bg-white shadow rounded overflow-hidden group">
                     <div class="relative">
-                        <img src="{{$prod->images[0]['url'] ?? "/assets/images/products/no-image.jpg"}}" alt="{{$prod->name}}" class="w-full">
+                        <img src="{{$prod->images[0]['url']['full'] ?? "/assets/images/products/no-image.jpg"}}" alt="{{$prod->name}}" class="w-full">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center
                     justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
                             <a href="/product/{{$prod->slug}}"
