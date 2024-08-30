@@ -1,8 +1,8 @@
 @extends("coreui::layouts.master")
 @section('content')
-    <div id="product-create-update"></div>
+    <div id="create"></div>
 @endsection
-@section('script')
+@push('scripts')
     <script src="{{asset('/tinymce/tinymce.min.js')}}"></script>
     <script>
         window.$VueData = {
@@ -13,6 +13,7 @@
             product: {!! !empty($product)?json_encode($product->toArray()):"null" !!},
             params: {!! !empty($params) ? base64_decode($params) : "null" !!},
         };
+        console.log('window.$VueData')
     </script>
     @vite('resources/js/vuejs/widgets/product_create_update.js')
-@endsection
+@endpush

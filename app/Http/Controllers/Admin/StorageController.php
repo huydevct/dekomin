@@ -16,13 +16,13 @@ class StorageController extends Controller
         } else if (isset($params['files'])) {
             $data_return = StorageFile::uploadMultiImages($params['files']);
         } else {
-            return $this->response("Not found file upload", 404);
+            return response()->json("Not found file upload", 404);
         }
 
         if ($data_return == false) {
-            return $this->response("Upload file fail!", 500);
+            return response()->json("Upload file fail!", 500);
         }
 
-        return $this->response($data_return);
+        return response()->json($data_return);
     }
 }

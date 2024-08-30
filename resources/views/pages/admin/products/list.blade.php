@@ -85,15 +85,16 @@
                                    placeholder="SKU">
                         </div>
 
-                        {{--                        <div class="col-sm-4">--}}
-                        {{--                            <select class="categories form-select" name="category_id" style="width: 100%;">--}}
-                        {{--                                <option value="" selected>Chọn 1 Category</option>--}}
-                        {{--                                @foreach ($categories as $cate)--}}
-                        {{--                                    <option--}}
-                        {{--                                        value="{{ $cate->id }}" {{ request('category_id') == $cate->id ? 'selected' : ''}}>{{ $cate->name }}</option>--}}
-                        {{--                                @endforeach--}}
-                        {{--                            </select>--}}
-                        {{--                        </div>--}}
+                        <div class="col-sm-4">
+                            <select class="categories form-select" name="category_id"
+                                    style="width: 100%;">
+                                <option value="" selected>Chọn 1 Category</option>
+                                @foreach ($categories as $cate)
+                                    <option
+                                        value="{{ $cate->id }}" {{ request('category_id') == $cate->id ? 'selected' : ''}}>{{ $cate->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
 
                         {{--                        <div class="col-sm-4">--}}
                         {{--                            <select name="is_hot" class="form-select" aria-label="Default select example"--}}
@@ -198,9 +199,9 @@
                                 <th scope="col">Name</th>
                                 <th scope="col">SKU</th>
                                 <th scope="col">Image</th>
-{{--                                <th scope="col">Stock</th>--}}
-{{--                                <th scope="col">Price Sale</th>--}}
-{{--                                <th scope="col">Price</th>--}}
+                                <th scope="col">Category</th>
+                                <th scope="col">Subject of use</th>
+                                <th scope="col">Rate</th>
 {{--                                <th scope="col">Parent ID</th>--}}
                                 <th scope="col">Active</th>
                                 <th scope="col">Recommend</th>
@@ -231,8 +232,29 @@
                                             @endforeach
                                         @endif
                                     </td>
-{{--                                    <td>{{$product->stock}}</td>--}}
-{{--                                    <td>{{$product->price_sale}}</td>--}}
+                                    <td>
+                                        @foreach($product->categories as $category)
+                                            <label class="badge badge-sm bg-success">
+                                                {{$category->name}}
+                                            </label><br>
+                                        @endforeach
+                                    </td>
+                                    <td>
+                                        @if($product->subject_of_use==1)
+                                            <label class="badge badge-sm bg-success">
+                                                Người già
+                                            </label>
+                                        @elseif($product->subject_of_use == 2)
+                                            <label class="badge badge-sm bg-primary">
+                                                Trẻ em
+                                            </label>
+                                        @elseif($product->subject_of_use == 3)
+                                            <label class="badge badge-sm bg-primary">
+                                                Người lớn
+                                            </label>
+                                        @endif
+                                    </td>
+                                    <td>{{$product->rate}}</td>
 {{--                                    <td>{{$product->price}}</td>--}}
 {{--                                    <td>--}}
 {{--                                        <a href="/admin/products?product_id={{$product->parent_id}}">{{$product->parent_id ?? 0}}</a>--}}

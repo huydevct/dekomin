@@ -19,8 +19,9 @@ class ProductController extends Controller
     {
         $products = ProductGet::getByAdmin();
         $products->appends($request->all());
+        $categories = Category::orderBy('id')->get();
 
-        return view('pages.admin.products.list', compact(['products']));
+        return view('pages.admin.products.list', compact(['products', 'categories']));
     }
 
     function store(ProductRequest $request)
@@ -28,7 +29,7 @@ class ProductController extends Controller
         $product = ProductSet::createOrUpdate($request->validated());
         if ($product === false) $this->response(500, 'Created failed! ');
 
-        return $this->response("Create success");
+        return response()->json("Create success");
     }
 
     function edit($id)
@@ -72,7 +73,7 @@ class ProductController extends Controller
         ProductCategory::where('product_id', $id)->delete();
 //        ProductLanguage::where('product_id', $id)->delete();
         DB::commit();
-        return $this->response('Deleted success');
+        return response()->json('Deleted success');
     }
 
     function update($id, ProductRequest $request)
@@ -83,7 +84,8 @@ class ProductController extends Controller
         }
         $product = ProductSet::createOrUpdate($request->validated(), $id);
         if (empty($product)) abort(404);
-        return redirect()->route('admin.products.list');
+        return response()->json("Success");
+//        return redirect()->route('admin.products.list');
     }
 
     function create()

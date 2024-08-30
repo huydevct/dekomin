@@ -27,6 +27,11 @@ return [
     | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
+    'image_resize' => [
+        'medium' => 1200,
+        'small' => 550,
+        'extra_small' => 250
+    ],
 
     'upload' => [
         'path_image' => 'upload/images/',

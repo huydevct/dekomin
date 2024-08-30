@@ -211,8 +211,8 @@
                                             Select subject of use
                                         </option>
                                         <option value="1">Người già</option>
-                                        <option value="1">Trẻ em</option>
-                                        <option value="2">Người lớn</option>
+                                        <option value="2">Trẻ em</option>
+                                        <option value="3">Người lớn</option>
                                     </select>
                                     <span
                                         v-if="
@@ -417,7 +417,7 @@
                                     typeof form_error.rate !=
                                     'undefined',
                             }">Rate</label>
-                                    <input class="form-control" type="text" name="rate"
+                                    <input class="form-control" type="number" name="rate"
                                            v-model="form_data.rate" />
                                     <span v-if="typeof form_error.rate !=
                                 'undefined'
@@ -1156,7 +1156,7 @@ export default {
                 uses: product ? product.uses : '',
                 note: product ? product.note : '',
                 categories: product ? product.categories : [],
-                flavour: product ? product.flavour : '',
+                name: product ? product.name : '',
                 brand: product ? product.brand : '',
                 xuat_xu: product ? product.info?.xuat_xu : '',
                 bao_hanh: product ? product.info?.bao_hanh : '',
@@ -1168,7 +1168,7 @@ export default {
                 dieu_khien_tu_xa: product ? product.info?.dieu_khien_tu_xa : 0,
                 dieu_khien_qua_app: product ? product.info?.dieu_khien_qua_app : 0,
                 khang_nuoc: product ? product.info?.khang_nuoc : 0,
-                stock: product ? product.stock : 0,
+                rate: product ? product.rate : 0,
                 stock_sold: product ? product.stock_sold : 0,
                 price: product ? product.price : 0,
                 length: product ? product.length : 0,
@@ -1396,7 +1396,7 @@ export default {
                 })
                 .then((res) => {
                     console.log("Upload file Success:", res.data);
-                    const data = res.data.data.map((item) => {
+                    const data = res.data.map((item) => {
                         return item;
                     });
 
@@ -1525,10 +1525,10 @@ export default {
                 selector: selector,
                 setup: function(editor) {
                     editor.on('init', function(e) {
-                        editor.setContent(self.content_vi);
+                        editor.setContent(self.uses);
                     });
                     editor.on('change', function () {
-                        self.content_vi = editor.getContent();
+                        self.uses = editor.getContent();
                     });
                 },
                 plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap emoticons accordion',
@@ -1597,10 +1597,10 @@ export default {
                 selector: selector,
                 setup: function(editor) {
                     editor.on('init', function(e) {
-                        editor.setContent(self.content_zh);
+                        editor.setContent(self.note);
                     });
                     editor.on('change', function () {
-                        self.content_zh = editor.getContent();
+                        self.note = editor.getContent();
                     });
                 },
                 plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap emoticons accordion',

@@ -25,14 +25,14 @@ class Images implements CastsAttributes
                         $item['file_name'] = config('filesystems.upload.path_image').'full/'.$item['file_name'];
                     }
                     $url = [
-                        'full' => Storage::disk('r2')->url($item['file_name'])
+                        'full' => Storage::url($item['file_name'])
                     ];
                     $url_pre = null;
                     foreach ($image_config as $type => $size) {
                         if ($item['size']['width'] < $size) {
                             $url[$type] = empty($url_pre) ? $url['full'] : $url_pre;
                         } else {
-                            $url[$type] = Storage::disk('r2')->url($item['file_name']);
+                            $url[$type] = Storage::url($item['file_name']);
                         }
                         $url_pre = $url[$type];
                     }
