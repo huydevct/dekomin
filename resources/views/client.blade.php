@@ -104,9 +104,10 @@
         </div>
     </div>
 
-    <div class="bg-white shadow rounded overflow-hidden">
-        <a href="/shop" class="text-white text-lg w-50 h-8 rounded-full bg-primary flex items-center  align-content-center justify-center hover:bg-gray-800 transition"
-        >Xem Thêm</a>
+    <div class="bg-white shadow rounded overflow-hidden w-max mx-auto flex justify-center items-center p-3">
+        <a href="/shop" class="text-white text-lg h-8 w-48 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+            Xem Thêm
+        </a>
     </div>
     <!-- ./new arrival -->
 
@@ -157,9 +158,10 @@
         </div>
     </div>
 
-    <div class="bg-white shadow rounded overflow-hidden">
-        <a href="/shop" class="text-white text-lg w-50 h-8 rounded-full bg-primary flex items-center  align-content-center justify-center hover:bg-gray-800 transition"
-        >Xem Thêm</a>
+    <div class="bg-white shadow rounded overflow-hidden w-max mx-auto flex justify-center items-center p-3">
+        <a href="/shop" class="text-white text-lg h-8 w-48 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+            Xem Thêm
+        </a>
     </div>
 
     <!-- ./product -->
