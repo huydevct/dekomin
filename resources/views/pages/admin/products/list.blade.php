@@ -49,17 +49,17 @@
                                    placeholder="Name Product">
                         </div>
 
-{{--                        <div class="col-sm-4">--}}
-{{--                            <input type="number" class="form-control" name="product_id"--}}
-{{--                                   value="{{$filter['product_id'] != 0 ? $filter['product_id'] : ""}}"--}}
-{{--                                   placeholder="Product ID">--}}
-{{--                        </div>--}}
+                        {{--                        <div class="col-sm-4">--}}
+                        {{--                            <input type="number" class="form-control" name="product_id"--}}
+                        {{--                                   value="{{$filter['product_id'] != 0 ? $filter['product_id'] : ""}}"--}}
+                        {{--                                   placeholder="Product ID">--}}
+                        {{--                        </div>--}}
 
-{{--                        <div class="col-sm-4">--}}
-{{--                            <input type="number" class="form-control" name="parent_id"--}}
-{{--                                   value="{{$filter['parent_id'] != 0 ? $filter['parent_id'] : ""}}"--}}
-{{--                                   placeholder="Parent ID">--}}
-{{--                        </div>--}}
+                        {{--                        <div class="col-sm-4">--}}
+                        {{--                            <input type="number" class="form-control" name="parent_id"--}}
+                        {{--                                   value="{{$filter['parent_id'] != 0 ? $filter['parent_id'] : ""}}"--}}
+                        {{--                                   placeholder="Parent ID">--}}
+                        {{--                        </div>--}}
 
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="name"
@@ -67,11 +67,11 @@
                                    placeholder="Name">
                         </div>
 
-{{--                        <div class="col-sm-4">--}}
-{{--                            <input type="text" class="form-control" name="flavour"--}}
-{{--                                   value="{{$filter['flavour'] != "" ? $filter['flavour'] : ""}}"--}}
-{{--                                   placeholder="Flavour">--}}
-{{--                        </div>--}}
+                        {{--                        <div class="col-sm-4">--}}
+                        {{--                            <input type="text" class="form-control" name="flavour"--}}
+                        {{--                                   value="{{$filter['flavour'] != "" ? $filter['flavour'] : ""}}"--}}
+                        {{--                                   placeholder="Flavour">--}}
+                        {{--                        </div>--}}
 
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="brand"
@@ -114,24 +114,24 @@
                             </select>
                         </div>
 
-{{--                        <div class="col-sm-4">--}}
-{{--                            <select name="price_sort" class="form-select" aria-label="Default select example"--}}
-{{--                                    onsubmit="sortPrice(this.value)">--}}
-{{--                                <option value="" selected="">Price Sort</option>--}}
-{{--                                <option value="asc" {!! $filter['price_sort']=='asc'?'selected':'' !!}>ASC</option>--}}
-{{--                                <option value="desc" {!! $filter['price_sort']=='desc'?'selected':'' !!}>DESC</option>--}}
-{{--                            </select>--}}
-{{--                        </div>--}}
+                        {{--                        <div class="col-sm-4">--}}
+                        {{--                            <select name="price_sort" class="form-select" aria-label="Default select example"--}}
+                        {{--                                    onsubmit="sortPrice(this.value)">--}}
+                        {{--                                <option value="" selected="">Price Sort</option>--}}
+                        {{--                                <option value="asc" {!! $filter['price_sort']=='asc'?'selected':'' !!}>ASC</option>--}}
+                        {{--                                <option value="desc" {!! $filter['price_sort']=='desc'?'selected':'' !!}>DESC</option>--}}
+                        {{--                            </select>--}}
+                        {{--                        </div>--}}
 
-{{--                        <div class="col-sm-4">--}}
-{{--                            <select name="stock_sort" class="form-select" aria-label="Default select example"--}}
-{{--                                    onsubmit="sortStock(this.value)">--}}
-{{--                                <option value="" selected="">Stock Sort</option>--}}
-{{--                                <option value="asc" {!! $filter['stock_sort']=='asc'?'selected':'' !!}>ASC</option>--}}
-{{--                                <option value="desc" {!! $filter['stock_sort']=='desc'?'selected':'' !!}>DESC--}}
-{{--                                </option>--}}
-{{--                            </select>--}}
-{{--                        </div>--}}
+                        {{--                        <div class="col-sm-4">--}}
+                        {{--                            <select name="stock_sort" class="form-select" aria-label="Default select example"--}}
+                        {{--                                    onsubmit="sortStock(this.value)">--}}
+                        {{--                                <option value="" selected="">Stock Sort</option>--}}
+                        {{--                                <option value="asc" {!! $filter['stock_sort']=='asc'?'selected':'' !!}>ASC</option>--}}
+                        {{--                                <option value="desc" {!! $filter['stock_sort']=='desc'?'selected':'' !!}>DESC--}}
+                        {{--                                </option>--}}
+                        {{--                            </select>--}}
+                        {{--                        </div>--}}
 
                         {{--                        <div class="col-sm-4">--}}
                         {{--                            <select name="quantity_sold_sort" class="form-select" aria-label="Default select example"--}}
@@ -162,20 +162,20 @@
                                 <option value="2" {!! $filter['active']==2?'selected':'' !!}>Không xác định</option>
                             </select>
                         </div>
-{{--                        <div class="col col-sm-4">--}}
-{{--                            <select name="popular" class="form-select" aria-label="Default select example">--}}
-{{--                                <option value="" selected>Chọn Popular</option>--}}
-{{--                                <option value="1" {!! $filter['popular']==1?'selected':'' !!}>Yes</option>--}}
-{{--                                <option value="0" {!! $filter['popular']==='0'?'selected':'' !!}>No</option>--}}
-{{--                            </select>--}}
-{{--                        </div>--}}
-{{--                        <div class="col col-sm-4">--}}
-{{--                            <select name="is_sale" class="form-select" aria-label="Default select example">--}}
-{{--                                <option value="" selected>Chọn Sale</option>--}}
-{{--                                <option value="1" {!! $filter['is_sale']==1?'selected':'' !!}>Yes</option>--}}
-{{--                                <option value="0" {!! $filter['is_sale']==='0'?'selected':'' !!}>No</option>--}}
-{{--                            </select>--}}
-{{--                        </div>--}}
+                        {{--                        <div class="col col-sm-4">--}}
+                        {{--                            <select name="popular" class="form-select" aria-label="Default select example">--}}
+                        {{--                                <option value="" selected>Chọn Popular</option>--}}
+                        {{--                                <option value="1" {!! $filter['popular']==1?'selected':'' !!}>Yes</option>--}}
+                        {{--                                <option value="0" {!! $filter['popular']==='0'?'selected':'' !!}>No</option>--}}
+                        {{--                            </select>--}}
+                        {{--                        </div>--}}
+                        {{--                        <div class="col col-sm-4">--}}
+                        {{--                            <select name="is_sale" class="form-select" aria-label="Default select example">--}}
+                        {{--                                <option value="" selected>Chọn Sale</option>--}}
+                        {{--                                <option value="1" {!! $filter['is_sale']==1?'selected':'' !!}>Yes</option>--}}
+                        {{--                                <option value="0" {!! $filter['is_sale']==='0'?'selected':'' !!}>No</option>--}}
+                        {{--                            </select>--}}
+                        {{--                        </div>--}}
                         <div class="col-sm-12 d-flex justify-content-center gap-2">
                             <div class="col-md-auto">
                                 <button type="button" class="btn btn-secondary" onclick="clearParams()">Clear</button>
@@ -202,16 +202,16 @@
                                 <th scope="col">Category</th>
                                 <th scope="col">Subject of use</th>
                                 <th scope="col">Rate</th>
-{{--                                <th scope="col">Parent ID</th>--}}
+                                {{--                                <th scope="col">Parent ID</th>--}}
                                 <th scope="col">Active</th>
                                 <th scope="col">Recommend</th>
-{{--                                <th scope="col">Sale</th>--}}
-{{--                                <th scope="col">Weight</th>--}}
-{{--                                <th scope="col">Weight Unit</th>--}}
+                                {{--                                <th scope="col">Sale</th>--}}
+                                {{--                                <th scope="col">Weight</th>--}}
+                                {{--                                <th scope="col">Weight Unit</th>--}}
                                 <th scope="col">Brand</th>
-{{--                                <th scope="col">Flavour</th>--}}
-{{--                                <th scope="col">Dimension</th>--}}
-{{--                                <th scope="col">Tax</th>--}}
+                                {{--                                <th scope="col">Flavour</th>--}}
+                                {{--                                <th scope="col">Dimension</th>--}}
+                                {{--                                <th scope="col">Tax</th>--}}
                                 <th scope="col">Order</th>
                                 <th scope="col">Options</th>
                             </tr>
@@ -225,11 +225,45 @@
                                     <td>{{$product->name}}</td>
                                     <td>{{$product->sku}}</td>
                                     <td>
-                                        @if(!empty($product->images))
-                                            @foreach($product->images as $image)
-                                                <img src="{{ $image['url']['full'] }}"
-                                                     style="max-width: 150px; max-height: 150px">
-                                            @endforeach
+                                        {{--                                        @if(!empty($product->images))--}}
+                                        {{--                                            @foreach($product->images as $image)--}}
+                                        {{--                                                <img src="{{ $image['url']['full'] }}"--}}
+                                        {{--                                                     style="max-width: 150px; max-height: 150px">--}}
+                                        {{--                                            @endforeach--}}
+                                        {{--                                        @endif--}}
+                                        @if(!empty($product->images) && count($product->images) > 0)
+                                            <div
+                                                style="width: 150px;background: white ;padding: 5px;border-radius: 4px;border: 1px solid #cccccc">
+                                                <div
+                                                    class="thumbnail-slices overflow-auto d-flex gap-1 {{count($product->images) == 1 ? 'justify-content-center' : ''}}">
+                                                    @foreach($product->images as $index => $p)
+                                                        <div class="video-wrapper position-relative">
+                                                            {{--                                                            @php--}}
+                                                            {{--                                                                $path = explode('.', $p['path']);--}}
+                                                            {{--                                                                $ext = end($path);--}}
+                                                            {{--                                                            @endphp--}}
+                                                            {{--                                                            @if($ext != "mp4")--}}
+                                                            <img
+                                                                style="width: 70px; height: 100px;border-radius: 5px;cursor: pointer; object-fit:cover"
+                                                                src="{!! $p['url']['small']  !!}"
+                                                                onclick="openImage('{!! $p['url']['full'] !!}')"
+                                                                alt="IMage">
+                                                            {{--                                                            @else--}}
+                                                            {{--                                                                <video src="{!! $p['url']['full']  !!}"--}}
+                                                            {{--                                                                       class="object-fit-contain"--}}
+                                                            {{--                                                                       style="width: 70px; height: 100px; border-radius: 5px; cursor: pointer; object-fit:cover"></video>--}}
+                                                            {{--                                                                <div--}}
+                                                            {{--                                                                    class="position-absolute top-0 start-0 w-100 h-100 z-3 text-white d-flex align-items-center justify-content-center"--}}
+                                                            {{--                                                                    onclick="openImage('{!! $p['url']['full'] !!}')">--}}
+                                                            {{--                                                                    <coreui::x-vendors.icon class="w-50 h-50"--}}
+                                                            {{--                                                                                    name="cil-media-play"></coreui::x-vendors.icon>--}}
+                                                            {{--                                                                </div>--}}
+                                                            {{--                                                            @endif--}}
+
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
                                         @endif
                                     </td>
                                     <td>
@@ -255,10 +289,10 @@
                                         @endif
                                     </td>
                                     <td>{{$product->rate}}</td>
-{{--                                    <td>{{$product->price}}</td>--}}
-{{--                                    <td>--}}
-{{--                                        <a href="/admin/products?product_id={{$product->parent_id}}">{{$product->parent_id ?? 0}}</a>--}}
-{{--                                    </td>--}}
+                                    {{--                                    <td>{{$product->price}}</td>--}}
+                                    {{--                                    <td>--}}
+                                    {{--                                        <a href="/admin/products?product_id={{$product->parent_id}}">{{$product->parent_id ?? 0}}</a>--}}
+                                    {{--                                    </td>--}}
                                     <td>
                                         @if($product->active==1)
                                             <label class="badge badge-sm bg-success">
@@ -281,117 +315,117 @@
                                             </label>
                                         @endif
                                     </td>
-{{--                                    <td>--}}
-{{--                                        @if($product->is_sale==1)--}}
-{{--                                            <label class="badge badge-sm bg-success">--}}
-{{--                                                Yes--}}
-{{--                                            </label>--}}
-{{--                                        @else--}}
-{{--                                            <label class="badge badge-sm bg-danger">--}}
-{{--                                                No--}}
-{{--                                            </label>--}}
-{{--                                        @endif--}}
-{{--                                    </td>--}}
-{{--                                    <td>{{$product->weight}}</td>--}}
-{{--                                    <td>{{$product->weight_unit}}</td>--}}
+                                    {{--                                    <td>--}}
+                                    {{--                                        @if($product->is_sale==1)--}}
+                                    {{--                                            <label class="badge badge-sm bg-success">--}}
+                                    {{--                                                Yes--}}
+                                    {{--                                            </label>--}}
+                                    {{--                                        @else--}}
+                                    {{--                                            <label class="badge badge-sm bg-danger">--}}
+                                    {{--                                                No--}}
+                                    {{--                                            </label>--}}
+                                    {{--                                        @endif--}}
+                                    {{--                                    </td>--}}
+                                    {{--                                    <td>{{$product->weight}}</td>--}}
+                                    {{--                                    <td>{{$product->weight_unit}}</td>--}}
                                     <td>{{$product->brand}}</td>
-{{--                                    <td>{{$product->flavour}}</td>--}}
-{{--                                    <td>--}}
-{{--                                        @if(!empty($product->length) || !empty($product->width) || !empty($product->height))--}}
-{{--                                            <button type="button" class="btn btn-primary" data-coreui-toggle="modal"--}}
-{{--                                                    data-coreui-target="#dimension_{{ $product->id }}">--}}
-{{--                                                Show--}}
-{{--                                            </button>--}}
+                                    {{--                                    <td>{{$product->flavour}}</td>--}}
+                                    {{--                                    <td>--}}
+                                    {{--                                        @if(!empty($product->length) || !empty($product->width) || !empty($product->height))--}}
+                                    {{--                                            <button type="button" class="btn btn-primary" data-coreui-toggle="modal"--}}
+                                    {{--                                                    data-coreui-target="#dimension_{{ $product->id }}">--}}
+                                    {{--                                                Show--}}
+                                    {{--                                            </button>--}}
 
-{{--                                            <!-- Modal -->--}}
-{{--                                            <div class="modal fade" id="dimension_{{ $product->id }}" tabindex="-1"--}}
-{{--                                                 aria-labelledby="dimension_{{ $product->id }}" aria-hidden="true">--}}
-{{--                                                <div class="modal-dialog">--}}
-{{--                                                    <div class="modal-content">--}}
-{{--                                                        <div class="modal-header">--}}
-{{--                                                            <h5 class="modal-title" id="dimension_{{ $product->id }}">--}}
-{{--                                                                Shipping Address of--}}
-{{--                                                                ID: {{ $product->id }}</h5>--}}
-{{--                                                            <button type="button" class="btn-close"--}}
-{{--                                                                    data-coreui-dismiss="modal"--}}
-{{--                                                                    aria-label="Close"></button>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="modal-body">--}}
-{{--                                                            @if(!empty($product->length))--}}
-{{--                                                                Length: {{$product->length}}<br>--}}
-{{--                                                            @endif--}}
-{{--                                                            @if(!empty($product->width))--}}
-{{--                                                                Width: {{$product->width}}<br>--}}
-{{--                                                            @endif--}}
-{{--                                                            @if(!empty($product->height))--}}
-{{--                                                                Height: {{$product->height}}<br>--}}
-{{--                                                            @endif--}}
+                                    {{--                                            <!-- Modal -->--}}
+                                    {{--                                            <div class="modal fade" id="dimension_{{ $product->id }}" tabindex="-1"--}}
+                                    {{--                                                 aria-labelledby="dimension_{{ $product->id }}" aria-hidden="true">--}}
+                                    {{--                                                <div class="modal-dialog">--}}
+                                    {{--                                                    <div class="modal-content">--}}
+                                    {{--                                                        <div class="modal-header">--}}
+                                    {{--                                                            <h5 class="modal-title" id="dimension_{{ $product->id }}">--}}
+                                    {{--                                                                Shipping Address of--}}
+                                    {{--                                                                ID: {{ $product->id }}</h5>--}}
+                                    {{--                                                            <button type="button" class="btn-close"--}}
+                                    {{--                                                                    data-coreui-dismiss="modal"--}}
+                                    {{--                                                                    aria-label="Close"></button>--}}
+                                    {{--                                                        </div>--}}
+                                    {{--                                                        <div class="modal-body">--}}
+                                    {{--                                                            @if(!empty($product->length))--}}
+                                    {{--                                                                Length: {{$product->length}}<br>--}}
+                                    {{--                                                            @endif--}}
+                                    {{--                                                            @if(!empty($product->width))--}}
+                                    {{--                                                                Width: {{$product->width}}<br>--}}
+                                    {{--                                                            @endif--}}
+                                    {{--                                                            @if(!empty($product->height))--}}
+                                    {{--                                                                Height: {{$product->height}}<br>--}}
+                                    {{--                                                            @endif--}}
 
-{{--                                                            @if(!empty($product->box_height))--}}
-{{--                                                                Box Height: {{$product->box_height}}<br>--}}
-{{--                                                            @endif--}}
-{{--                                                            @if(!empty($product->box_length))--}}
-{{--                                                                Box Length: {{$product->box_length}}<br>--}}
-{{--                                                            @endif--}}
-{{--                                                            @if(!empty($product->box_width))--}}
-{{--                                                                Box Width: {{$product->box_width}}<br>--}}
-{{--                                                            @endif--}}
-{{--                                                            @if(!empty($product->box_count))--}}
-{{--                                                                Box Count: {{$product->box_width}}<br>--}}
-{{--                                                            @endif--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="modal-footer">--}}
-{{--                                                            <button type="button" class="btn btn-secondary"--}}
-{{--                                                                    data-coreui-dismiss="modal">Close--}}
-{{--                                                            </button>--}}
-{{--                                                        </div>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        @else--}}
-{{--                                            No Dimension--}}
-{{--                                        @endif--}}
-{{--                                    </td>--}}
-{{--                                    <td>--}}
-{{--                                        @if(!empty($product->tax_pst) || !empty($product->tax_gst))--}}
-{{--                                            <button type="button" class="btn btn-primary" data-coreui-toggle="modal"--}}
-{{--                                                    data-coreui-target="#tax_{{ $product->id }}">--}}
-{{--                                                Show--}}
-{{--                                            </button>--}}
+                                    {{--                                                            @if(!empty($product->box_height))--}}
+                                    {{--                                                                Box Height: {{$product->box_height}}<br>--}}
+                                    {{--                                                            @endif--}}
+                                    {{--                                                            @if(!empty($product->box_length))--}}
+                                    {{--                                                                Box Length: {{$product->box_length}}<br>--}}
+                                    {{--                                                            @endif--}}
+                                    {{--                                                            @if(!empty($product->box_width))--}}
+                                    {{--                                                                Box Width: {{$product->box_width}}<br>--}}
+                                    {{--                                                            @endif--}}
+                                    {{--                                                            @if(!empty($product->box_count))--}}
+                                    {{--                                                                Box Count: {{$product->box_width}}<br>--}}
+                                    {{--                                                            @endif--}}
+                                    {{--                                                        </div>--}}
+                                    {{--                                                        <div class="modal-footer">--}}
+                                    {{--                                                            <button type="button" class="btn btn-secondary"--}}
+                                    {{--                                                                    data-coreui-dismiss="modal">Close--}}
+                                    {{--                                                            </button>--}}
+                                    {{--                                                        </div>--}}
+                                    {{--                                                    </div>--}}
+                                    {{--                                                </div>--}}
+                                    {{--                                            </div>--}}
+                                    {{--                                        @else--}}
+                                    {{--                                            No Dimension--}}
+                                    {{--                                        @endif--}}
+                                    {{--                                    </td>--}}
+                                    {{--                                    <td>--}}
+                                    {{--                                        @if(!empty($product->tax_pst) || !empty($product->tax_gst))--}}
+                                    {{--                                            <button type="button" class="btn btn-primary" data-coreui-toggle="modal"--}}
+                                    {{--                                                    data-coreui-target="#tax_{{ $product->id }}">--}}
+                                    {{--                                                Show--}}
+                                    {{--                                            </button>--}}
 
-{{--                                            <!-- Modal -->--}}
-{{--                                            <div class="modal fade" id="tax_{{ $product->id }}" tabindex="-1"--}}
-{{--                                                 aria-labelledby="tax_{{ $product->id }}" aria-hidden="true">--}}
-{{--                                                <div class="modal-dialog">--}}
-{{--                                                    <div class="modal-content">--}}
-{{--                                                        <div class="modal-header">--}}
-{{--                                                            <h5 class="modal-title" id="tax_{{ $product->id }}">--}}
-{{--                                                                Shipping Address of--}}
-{{--                                                                ID: {{ $product->id }}</h5>--}}
-{{--                                                            <button type="button" class="btn-close"--}}
-{{--                                                                    data-coreui-dismiss="modal"--}}
-{{--                                                                    aria-label="Close"></button>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="modal-body">--}}
-{{--                                                            @if(!empty($product->tax_gst))--}}
-{{--                                                                GST: {{$product->tax_gst}}<br>--}}
-{{--                                                            @endif--}}
-{{--                                                            @if(!empty($product->tax_pst))--}}
-{{--                                                                PST: {{$product->tax_pst}}<br>--}}
-{{--                                                            @endif--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="modal-footer">--}}
-{{--                                                            <button type="button" class="btn btn-secondary"--}}
-{{--                                                                    data-coreui-dismiss="modal">Close--}}
-{{--                                                            </button>--}}
-{{--                                                        </div>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        @else--}}
-{{--                                            No Tax--}}
-{{--                                        @endif--}}
-{{--                                    </td>--}}
+                                    {{--                                            <!-- Modal -->--}}
+                                    {{--                                            <div class="modal fade" id="tax_{{ $product->id }}" tabindex="-1"--}}
+                                    {{--                                                 aria-labelledby="tax_{{ $product->id }}" aria-hidden="true">--}}
+                                    {{--                                                <div class="modal-dialog">--}}
+                                    {{--                                                    <div class="modal-content">--}}
+                                    {{--                                                        <div class="modal-header">--}}
+                                    {{--                                                            <h5 class="modal-title" id="tax_{{ $product->id }}">--}}
+                                    {{--                                                                Shipping Address of--}}
+                                    {{--                                                                ID: {{ $product->id }}</h5>--}}
+                                    {{--                                                            <button type="button" class="btn-close"--}}
+                                    {{--                                                                    data-coreui-dismiss="modal"--}}
+                                    {{--                                                                    aria-label="Close"></button>--}}
+                                    {{--                                                        </div>--}}
+                                    {{--                                                        <div class="modal-body">--}}
+                                    {{--                                                            @if(!empty($product->tax_gst))--}}
+                                    {{--                                                                GST: {{$product->tax_gst}}<br>--}}
+                                    {{--                                                            @endif--}}
+                                    {{--                                                            @if(!empty($product->tax_pst))--}}
+                                    {{--                                                                PST: {{$product->tax_pst}}<br>--}}
+                                    {{--                                                            @endif--}}
+                                    {{--                                                        </div>--}}
+                                    {{--                                                        <div class="modal-footer">--}}
+                                    {{--                                                            <button type="button" class="btn btn-secondary"--}}
+                                    {{--                                                                    data-coreui-dismiss="modal">Close--}}
+                                    {{--                                                            </button>--}}
+                                    {{--                                                        </div>--}}
+                                    {{--                                                    </div>--}}
+                                    {{--                                                </div>--}}
+                                    {{--                                            </div>--}}
+                                    {{--                                        @else--}}
+                                    {{--                                            No Tax--}}
+                                    {{--                                        @endif--}}
+                                    {{--                                    </td>--}}
                                     <td>
                                         {{$product->order}}
                                     </td>
@@ -420,6 +454,44 @@
     @push('scripts')
 
         <script>
+            function setupAutoScroll(container) {
+                var scrollDirection = 1;
+                var scrollSpeed = 1;
+                var isHovered = false;
+
+                function scrollImages() {
+                    if (isHovered) return;
+
+                    if (scrollDirection === 1) {
+                        container.scrollLeft += scrollSpeed;
+                    } else {
+                        container.scrollLeft -= scrollSpeed;
+                    }
+                    if (container.scrollLeft >= (container.scrollWidth - container.clientWidth) || container.scrollLeft <= 0) {
+                        scrollDirection *= -1;
+                    }
+                }
+
+                container.addEventListener('mouseenter', function () {
+                    isHovered = true;
+                });
+
+                container.addEventListener('mouseleave', function () {
+                    isHovered = false;
+                });
+
+                setInterval(scrollImages, 50);
+            }
+
+            var containers = document.querySelectorAll('.thumbnail-slices');
+            containers.forEach(function (container) {
+                setupAutoScroll(container);
+            });
+
+            function openImage(url) {
+                window.open(url);
+            }
+
             function clearParams() {
                 window.location.href = '<?php echo e(route('admin.products.list')); ?>'
             }
@@ -525,5 +597,26 @@
             FuiToast.error('{!! Session::get('errors') !!}')
             @endif
         </script>
+        <style>
+            .thumbnail-slices {
+                overflow-y: hidden !important;
+            }
+
+            .video-wrapper {
+                width: 70px;
+                height: 100px;
+                margin: 0 5px;
+
+            > div {
+                cursor: pointer;
+                border-radius: 5px;
+
+            > span {
+                background: #ffffff7a;
+            }
+
+            }
+            }
+        </style>
     @endpush
 @endsection

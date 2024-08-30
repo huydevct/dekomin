@@ -16,13 +16,16 @@
     <!-- product-detail -->
     <div class="container grid grid-cols-2 gap-6">
         <div>
-            <img src="{{$product->images[0]['url']['full'] ? $product->images[0]['url']['full'] : '/assets/images/products/no-image.jpg'}}" alt="{{$product->slug . $product->id}}" class="w-full">
+            <img id="img-preview"
+                src="{{$product->images[0]['url']['full'] ? $product->images[0]['url']['full'] : '/assets/images/products/no-image.jpg'}}"
+                alt="{{$product->slug . $product->id}}" class="w-full">
             <div class="grid grid-cols-5 gap-4 mt-4">
                 @if(!empty($product->images))
                     @foreach($product->images as $image)
-                        <img src="{{$image['url']['full'] ? $image['url']['full'] : '/assets/images/products/no-image.jpg'}}"
-                             alt="{{$product->slug . $product->id}}"
-                             class="w-full cursor-pointer border border-primary">
+                        <img onclick="switchPreview('{{!empty($image['url']['full']) ? $image['url']['full'] : '/assets/images/products/no-image.jpg'}}')"
+                            src="{{$image['url']['full'] ? $image['url']['full'] : '/assets/images/products/no-image.jpg'}}"
+                            alt="{{$product->slug . $product->id}}"
+                            class="w-full cursor-pointer border border-primary">
                     @endforeach
                 @else
                     <img src="/assets/images/products/no-image.jpg"
@@ -136,7 +139,9 @@
             @foreach($products as $prod)
                 <div class="bg-white shadow rounded overflow-hidden group">
                     <div class="relative">
-                        <img src="{{$prod->images[0]['url']['full'] ?? "/assets/images/products/no-image.jpg"}}" alt="{{$prod->name}}" class="w-full">
+                        <img
+                             src="{{$prod->images[0]['url']['full'] ?? "/assets/images/products/no-image.jpg"}}"
+                             alt="{{$prod->name}}" class="w-full">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center
                     justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
                             <a href="/product/{{$prod->slug}}"
@@ -149,22 +154,33 @@
                     <div class="pt-4 pb-3 px-4">
                         <a href="#">
                             <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
-                            {{$prod->name}}
+                                {{$prod->name}}
                             </h4>
                         </a>
                         <div class="flex items-baseline mb-1 space-x-2">
                             <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"><p
-                                    class="text-xl text-primary font-semibold">Giá: Liên hệ chúng tôi để biết về giá sản phẩm
+                                    class="text-xl text-primary font-semibold">Giá: Liên hệ chúng tôi để biết về giá sản
+                                    phẩm
                                     này.</p></a>
                         </div>
                         <div class="flex items-center">
                         </div>
                     </div>
                     <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
-                       class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition"> Liên hệ để mua.</a>
+                       class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
+                        Liên hệ để mua.</a>
                 </div>
             @endforeach
         </div>
     </div>
     <!-- ./related product -->
 @endsection
+@push('scripts')
+    <script>
+        function switchPreview(url) {
+            const previewImg = document.getElementById('img-preview')
+            previewImg.removeAttribute('src');
+            previewImg.setAttribute('src', url)
+        }
+    </script>
+@endpush

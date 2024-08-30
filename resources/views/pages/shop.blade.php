@@ -92,7 +92,6 @@
                             </div>
                         </div>
                 </div>
-
                 @endforeach
             @else
                 <div class="align-content-center text-center">
@@ -103,7 +102,11 @@
                         chúng tôi để biết thêm chi tiết.
                     </a>
                 </div>
+                <div class="card-footer">
+                    {!! $products->links('vendor.pagination.simple-bootstrap-5') !!}
+                </div>
         @endif
+
         <!-- ./products -->
             <!-- ./shop wrapper -->
 

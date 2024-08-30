@@ -103,6 +103,11 @@
             @endforeach
         </div>
     </div>
+
+    <div class="bg-white shadow rounded overflow-hidden">
+        <a href="/shop" class="text-white text-lg w-50 h-8 rounded-full bg-primary flex items-center  align-content-center justify-center hover:bg-gray-800 transition"
+        >Xem Thêm</a>
+    </div>
     <!-- ./new arrival -->
 
     <!-- ads -->
@@ -151,5 +156,11 @@
             @endforeach
         </div>
     </div>
+
+    <div class="bg-white shadow rounded overflow-hidden">
+        <a href="/shop" class="text-white text-lg w-50 h-8 rounded-full bg-primary flex items-center  align-content-center justify-center hover:bg-gray-800 transition"
+        >Xem Thêm</a>
+    </div>
+
     <!-- ./product -->
 @endsection

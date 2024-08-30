@@ -17,13 +17,13 @@ use App\Http\Controllers\Client\WebController;
 
 Route::get('/', function () {
     $categories = \App\Models\Category::orderBy('id')->where('active', 1)->get();
-    $products = \App\Models\Product::where('active', 1)->get();
+    $products = \App\Models\Product::where('active', 1)->limit(10)->get();
     return view('client', compact(['categories', 'products']));
 });
 
 Route::get('/shop', function () {
     $categories = \App\Models\Category::orderBy('id')->where('active', 1)->get();
-    $products = \App\Models\Product::where('active', 1)->get();
+    $products = \App\Models\Product::where('active', 1)->simplePaginate(10);
     return view('pages.shop', compact(['categories', 'products']));
 })->name('shop');
 
