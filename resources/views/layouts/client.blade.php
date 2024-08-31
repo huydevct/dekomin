@@ -30,7 +30,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XP6B8Y71PD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-XP6B8Y71PD');
@@ -54,8 +58,10 @@
 
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW4K4WD8"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW4K4WD8"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- header -->
 <header class="py-4 shadow-sm bg-white">
@@ -151,7 +157,7 @@
                 {{--                        class="fa-brands fa-twitter-square"></i></a>--}}
                 {{--                <a href="#" class="text-gray-400 hover:text-gray-500">--}}
                 {{--                    <i class="fa-brands fa-github-square"></i>--}}
-                </a>
+                {{--                </a>--}}
             </div>
         </div>
 
@@ -221,7 +227,7 @@
                 ulSearch.innerHTML = "";
                 const response = data.data;
 
-                if(response.length === 0){
+                if (response.length === 0) {
                     const html = document.createElement('li');
                     html.innerHTML = `
                         <a type="button" href="{{request()->path()}}"
@@ -244,7 +250,7 @@
                                 class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem">
                             <div class="inline-flex items-center">
-                                <img src="${element.images && element.images.length > 0 ? element.images[0]?.url : "/assets/images/products/no-image.jpg"}" class="w-10 h-10 px-3">
+                                <img src="${element.images && element.images.length > 0 ? element.images[0]?.url.full : "/assets/images/products/no-image.jpg"}" class="w-10 h-10 px-3">
                                 ${element.name}
                             </div>
                         </a>
