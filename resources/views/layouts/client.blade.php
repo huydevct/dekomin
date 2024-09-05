@@ -167,7 +167,7 @@
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Về chúng tôi</h3>
                     <div class="mt-4 space-y-4">
                         <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
-                           class="text-base text-gray-500 hover:text-gray-900 block">Hệ thống cửa hàn</a>
+                           class="text-base text-gray-500 hover:text-gray-900 block">Hệ thống cửa hàng</a>
                         <a href="/" class="text-base text-gray-500 hover:text-gray-900 block">Sản phẩm</a>
                         <a href="/" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
                     </div>
@@ -177,18 +177,18 @@
 
 
                 <div>
-                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3>
-                    <div class="mt-4 space-y-4">
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Pricing</a>
-                        <!-- <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentation</a> -->
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guides</a>
-                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API Status</a>
-                    </div>
+{{--                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3>--}}
+{{--                    <div class="mt-4 space-y-4">--}}
+{{--                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Pricing</a>--}}
+{{--                        <!-- <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentation</a> -->--}}
+{{--                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guides</a>--}}
+{{--                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API Status</a>--}}
+{{--                    </div>--}}
                 </div>
                 <div>
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Hỗ trợ</h3>
                     <div class="mt-4 space-y-4">
-                        <a href="https://www.facebook.com/profile.php?id=61550643794060"
+                        <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
                            class="text-base text-gray-500 hover:text-gray-900 block">Liên hệ</a>
                     </div>
                 </div>
