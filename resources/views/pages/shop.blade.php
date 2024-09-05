@@ -63,8 +63,9 @@
                     @foreach($products as $product)
                         <div class="bg-white shadow rounded overflow-hidden group">
                             <div class="relative">
-                                <img src="{{$product->images[0]['url']['full'] ?? '/assets/images/products/no-image.jpg'}}"
-                                     alt="{{$product->name}}" class="w-full">
+                                <img
+                                    src="{{$product->images[0]['url']['full'] ?? '/assets/images/products/no-image.jpg'}}"
+                                    alt="{{$product->name}}" class="w-full">
                                 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center
                         justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
                                     <a href="/product/{{$product->slug}}"
@@ -102,9 +103,11 @@
                         chúng tôi để biết thêm chi tiết.
                     </a>
                 </div>
-                <div class="card-footer">
-                    {!! $products->links('vendor.pagination.simple-bootstrap-5') !!}
-                </div>
+                @if(!empty($products) && count($products) > 0)
+                    <div class="card-footer">
+                        {!! $products->links('vendor.pagination.simple-bootstrap-5') !!}
+                    </div>
+                @endif
         @endif
 
         <!-- ./products -->
