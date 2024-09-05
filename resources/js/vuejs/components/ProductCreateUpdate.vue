@@ -417,7 +417,7 @@
                                     typeof form_error.rate !=
                                     'undefined',
                             }">Rate</label>
-                                    <input class="form-control" type="number" name="rate"
+                                    <input class="form-control" type="number" name="rate" step="0.01"
                                            v-model="form_data.rate" />
                                     <span v-if="typeof form_error.rate !=
                                 'undefined'

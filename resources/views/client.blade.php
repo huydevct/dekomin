@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="border border-primary rounded-sm px-3 py-6 flex justify-center items-center gap-5">
-                <img src="/assets/images/icons/office.svg" alt="Delivery" class="w-12 h-12 object-contain">
+                <img src="/assets/images/icons/money-back.svg" alt="Delivery" class="w-12 h-12 object-contain">
                 <div>
                     <h4 class="font-medium capitalize text-lg">Chât Lượng Hàng Đầu</h4>
                     <p class="text-gray-500 text-sm">Chất lượng luôn được đảm bảo</p>

@@ -97,6 +97,7 @@
             @else
                 <div class="align-content-center text-center">
                     <p class="mb-2">Không có sản phẩm khả dụng.</p>
+                    <a href="/" class="px-5 w-30 py-1 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition">Quay về trang chủ.</a>
                     <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
                        class="px-5 w-30 py-1 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition">
                         Liên hệ với

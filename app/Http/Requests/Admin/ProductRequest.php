@@ -39,7 +39,7 @@ class ProductRequest extends FormRequest
             'is_recommend' => ['integer', 'nullable', Rule::in([1, 0])],
             'subject_of_use' => ['integer', 'nullable', Rule::in([1, 2, 3, 0])],
 //            'stock' => ['integer', 'nullable'],
-            'rate' => ['integer', 'nullable'],
+            'rate' => ['numeric', 'nullable'],
 //            'rating' => ['numeric', 'nullable'],
 //            'price' => ['numeric', 'nullable'],
 //            'width' => ['numeric', 'nullable'],
