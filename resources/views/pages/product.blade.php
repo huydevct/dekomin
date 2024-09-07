@@ -81,7 +81,7 @@
             </div>
 
             <div class="pt-4">
-                <h4>Công dụng:</h4>
+                <h4>Giới thiệu:</h4>
                 <p class="mt-4 text-gray-600">
                     @php
                         echo $product->description
@@ -126,12 +126,12 @@
     <!-- ./product-detail -->
 
     <!-- description -->
-    <div class="container pb-16">
-        <h3 class="border-b border-gray-200 font-roboto text-gray-800 pb-3 font-medium">Product details</h3>
+    <div class="container pb-16 pt-3">
+        <h3 class="border-b border-gray-200 font-roboto text-gray-800 pb-5 p-5 font-medium">Chi Tiết</h3>
         <div class="w-3/5 pt-6">
             <div class="text-gray-600">
                 <div class="pt-4">
-                    <h4>Công dụng:</h4>
+                    <h4>Giới thiệu:</h4>
                     <p class="mt-4 text-gray-600">
                         @php
                             echo $product->description

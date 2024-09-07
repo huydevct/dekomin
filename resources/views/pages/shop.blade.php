@@ -53,19 +53,17 @@
         <!-- products -->
         <div class="col-span-4">
             <div class="flex items-center mb-4">
-
                 <div class="flex gap-2 ml-auto">
                 </div>
             </div>
             @if(count($products) > 0)
-
-                <div class="grid md:grid-cols-3 grid-cols-2 gap-6">
+                <div class="grid md:grid-cols-4 grid-cols-2 gap-6">
                     @foreach($products as $product)
                         <div class="bg-white shadow rounded overflow-hidden group">
                             <div class="relative">
                                 <img
                                     src="{{$product->images[0]['url']['full'] ?? '/assets/images/products/no-image.jpg'}}"
-                                    alt="{{$product->name}}" class="w-full">
+                                    alt="{{$product->name}}" class="w-1/2">
                                 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center
                         justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
                                     <a href="/product/{{$product->slug}}"
@@ -92,12 +90,14 @@
                                     Liên hệ để mua.</a>
                             </div>
                         </div>
+                    @endforeach
                 </div>
-                @endforeach
             @else
                 <div class="align-content-center text-center">
                     <p class="mb-2">Không có sản phẩm khả dụng.</p>
-                    <a href="/" class="px-5 w-30 py-1 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition">Quay về trang chủ.</a>
+                    <a href="/"
+                       class="px-5 w-30 py-1 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition">Quay
+                        về trang chủ.</a>
                     <a href="https://www.facebook.com/profile.php?id=61550643794060" target="_blank"
                        class="px-5 w-30 py-1 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition">
                         Liên hệ với
@@ -108,7 +108,7 @@
                     <div class="card-footer">
                         {!! $products->links('vendor.pagination.simple-bootstrap-5') !!}
                     </div>
-                @endif
+            @endif
         @endif
 
         <!-- ./products -->
