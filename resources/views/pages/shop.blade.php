@@ -104,11 +104,11 @@
                         chúng tôi để biết thêm chi tiết.
                     </a>
                 </div>
-                @if(!empty($products) && count($products) > 0)
-                    <div class="card-footer">
-                        {!! $products->links('vendor.pagination.simple-bootstrap-5') !!}
-                    </div>
             @endif
+            @if(!empty($products) && count($products) > 0)
+                <div class="">
+                    {!! $products->links('vendor.pagination.tailwind') !!}
+                </div>
         @endif
 
         <!-- ./products -->

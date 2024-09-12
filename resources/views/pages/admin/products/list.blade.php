@@ -96,14 +96,19 @@
                             </select>
                         </div>
 
-                        {{--                        <div class="col-sm-4">--}}
-                        {{--                            <select name="is_hot" class="form-select" aria-label="Default select example"--}}
-                        {{--                                    onsubmit="sortHot(this.value)">--}}
-                        {{--                                <option value="" selected="">Is Hot</option>--}}
-                        {{--                                <option value="1" {!! $filter['is_hot']=='1'?'selected':'' !!}>Yes</option>--}}
-                        {{--                                <option value="2" {!! $filter['is_hot']=='2'?'selected':'' !!}>No</option>--}}
-                        {{--                            </select>--}}
-                        {{--                        </div>--}}
+                        <div class="col-sm-4">
+                            <select name="is_hot" class="form-select"
+                                    aria-label="Default select example"
+                                    onsubmit="sortHot(this.value)">
+                                <option value="" selected="">Is Hot</option>
+                                <option value="1" {!! $filter['is_hot']=='1'?'selected':'' !!}>
+                                    Yes
+                                </option>
+                                <option value="2" {!! $filter['is_hot']=='2'?'selected':'' !!}>
+                                    No
+                                </option>
+                            </select>
+                        </div>
 
                         <div class="col-sm-4">
                             <select name="order_sort" class="form-select" aria-label="Default select example"
@@ -499,6 +504,11 @@
             function sortOrder(sort) {
                 window.location.href = removeParam("order_sort")
                 insertParam("order_sort", sort)
+            }
+
+            function sortHot(sort) {
+                window.location.href = removeParam("is_hot")
+                insertParam("is_hot", sort)
             }
 
             function sortPrice(sort) {

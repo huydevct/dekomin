@@ -40,8 +40,8 @@ class ProductGet
 //        $product = new Product();
 //        $products = Product::baseQueryBuilder($product);
         //Filter
-        if (isset($request['order']) && ($request['order'] == 'asc' || $request['order'] == 'desc')) {
-            $products->orderBy('order', $request['order']);
+        if (isset($request['order_sort']) && ($request['order_sort'] == 'asc' || $request['order_sort'] == 'desc')) {
+            $products->orderBy('order', $request['order_sort']);
         }
 
         if (isset($request['stock_sort']) && ($request['stock_sort'] == 'asc' || $request['stock_sort'] == 'desc')) {
@@ -77,10 +77,10 @@ class ProductGet
                 $products->where('active', $active);
             }
         }
-        if (Request::has('popular')) {
-            $popular = Request::input('popular');
+        if (Request::has('is_hot')) {
+            $popular = Request::input('is_hot');
             if ($popular != null) {
-                $products->where('is_hot', $popular);
+                $products->where('is_recommend', $popular);
             }
         }
         if (Request::has('is_sale')) {
@@ -118,6 +118,7 @@ class ProductGet
         }
         if (!Request::has('sku') &
             !Request::has('brand') &&
+            !Request::has('is_hot') &&
             !Request::has('category_id')) {
             $products->orderBy('id', 'desc');
         }
